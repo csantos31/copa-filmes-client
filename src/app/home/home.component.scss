@@ -1,0 +1,132 @@
+h1,
+h2,
+h3,
+h4,
+b,
+p,
+mat-button-toggle {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  text-align: center;
+}
+
+//DESKTOP LAYOUT
+.content-desktop {
+  padding: 0;
+  margin: 0;
+  background: #f2f0f0;
+  width: 100%;
+  height: auto;
+  min-height: 800px;
+  display: block;
+
+  .align-center {
+    width: 90%;
+    margin: auto;
+    padding-top: 40px;
+
+    mat-card {
+      padding-left: 20%;
+      padding-right: 20%;
+      background-color: #1f1f1f;
+      color: #666666;
+
+      .mat-divider-horizontal {
+        width: 20%;
+        margin: auto;
+        position: unset;
+      }
+
+      h1,
+      h2 {
+        color: #FFFFFF;
+        margin: 16px;
+        margin-top: 0;
+        padding: 0;
+      }
+
+      h2 {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+
+    .count {
+      width: 100%;
+      height: 60px;
+      background-color: #dfd9d9;
+      color: #1f1f1f;
+      padding-left: 24px;
+      padding-right: 24px;
+      box-sizing: border-box;
+
+      .f-left {
+        width: 80%;
+        float: left;
+        padding-top: 4px;
+        box-sizing: border-box;
+        p {
+          font-size: 16px;
+          text-align: justify;
+        }
+      }
+
+      .f-right {
+        width: 20%;
+        float: left;
+        padding-left: 36px;
+        padding-top: 20px;
+        box-sizing: border-box;
+
+        mat-button-toggle {
+          font-size: 14px;
+          text-align: justify;
+          cursor: pointer;
+          background: #1f1f1f;
+          color: #FFFFFF;
+          padding: 10px;
+          border-radius: 8px;
+        }
+      }
+    }
+
+    mat-grid-list {
+      background: #494848;
+
+      mat-grid-tile {
+        mat-card {
+          background-color: #dfd9d9;
+          color: #1f1f1f;
+          padding-left: 24px;
+          padding-right: 24px;
+
+          .f-left {
+            width: 5%;
+            float: left;
+
+            .mat-checkbox ::ng-deep .mat-checkbox-inner-container {
+              width: 32px;
+              height: 32px;
+              margin-top: 14px;
+            }
+
+          }
+
+          .f-right {
+            width: 95%;
+            float: left;
+            padding-left: 36px;
+            box-sizing: border-box;
+
+            p {
+              font-weight: 200;
+              font-size: 14px;
+              width: 90%;
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
+  }
+}
