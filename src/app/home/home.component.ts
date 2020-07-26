@@ -25,17 +25,19 @@ export class HomeComponent implements OnInit {
 
   getMovies() {
     this.moviesProvider.getMovies().subscribe(data => {
-      console.log(data)
       if (data != null && data != 'undefined') {
         this.movies = data;
       }
     });
   }
 
-  showOptions(event) {
-    console.log('event', event);
+  changeCheck(event) {
     if (event.checked == true) {
-      this.challengeMovies.push(this.getMovieById(event.source.value));
+      if(this.challengeMovies.length != 8){
+        this.challengeMovies.push(this.getMovieById(event.source.value));
+      }else{
+        event.source.checked = false;
+      }
     }else{
       this.removeMovie(event.source.value);
     }

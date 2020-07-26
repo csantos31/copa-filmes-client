@@ -11,7 +11,7 @@
     </mat-card>
     <div class="count">
       <div class="f-left">
-        <p>Selecionados 0 de 8 filmes</p>
+        <p>Selecionados <span>{{challengeMovies.length}}</span> de 8 filmes</p>
       </div>
       <div class="f-right">
         <mat-button-toggle value="bold">GERAR MEU CAMPEONATO</mat-button-toggle>
@@ -22,7 +22,7 @@
         <!--item-->
         <mat-card class="custom-card">
           <div class="f-left">
-            <mat-checkbox [labelPosition]="labelPosition" (change)="showOptions($event)" value="{{movie.id}}">
+            <mat-checkbox [labelPosition]="labelPosition" (change)="changeCheck($event)" value="{{movie.id}}">
             </mat-checkbox>
           </div>
           <div class="f-right">
