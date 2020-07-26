@@ -9,7 +9,9 @@ import { FilmesProviderService } from '../providers/filmes-provider.service';
 })
 export class HomeComponent implements OnInit {
 
-  movies: any = null;
+  movies = null;
+  counter = 0;
+  challengeMovies = new Array();
 
   constructor(
     private router: Router,
@@ -26,10 +28,29 @@ export class HomeComponent implements OnInit {
       console.log(data)
       if (data != null && data != 'undefined') {
         this.movies = data;
-        console.log(this.movies, "os filmes");
       }
     });
   }
 
+  showOptions(event) {
+    console.log('event', event);
+    if (event.checked == true) {
+      this.challengeMovies.push(this.getMovieById(event.source.value));
+    }else{
+      this.removeMovie(event.source.value);
+    }
+    console.log(this.challengeMovies);
+  }
+
+  getMovieById(id) {
+    return this.movies.find(x => x.id == id);
+  }
+
+  removeMovie(id) {
+    const index: number = this.challengeMovies.findIndex(x => x.id == id);
+    if (index !== -1) {
+        this.challengeMovies.splice(index, 1);
+    }        
+}
 
 }

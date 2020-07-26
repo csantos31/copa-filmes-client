@@ -22,7 +22,7 @@
         <!--item-->
         <mat-card class="custom-card">
           <div class="f-left">
-            <mat-checkbox [labelPosition]="labelPosition">
+            <mat-checkbox [labelPosition]="labelPosition" (change)="showOptions($event)" value="{{movie.id}}">
             </mat-checkbox>
           </div>
           <div class="f-right">
