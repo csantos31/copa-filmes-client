@@ -88,6 +88,24 @@ mat-button-toggle {
           border-radius: 8px;
         }
       }
+      
+      .f-right-unclickable{
+        width: 20%;
+        float: left;
+        padding-left: 36px;
+        padding-top: 20px;
+        box-sizing: border-box;
+
+        mat-button-toggle {
+          font-size: 14px;
+          text-align: justify;
+          cursor: pointer;
+          background: #b1b1b1;
+          color: #FFFFFF;
+          padding: 10px;
+          border-radius: 8px;
+        }
+      }
     }
 
     mat-grid-list {
