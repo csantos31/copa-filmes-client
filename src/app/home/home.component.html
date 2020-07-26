@@ -14,7 +14,7 @@
         <p>Selecionados <span>{{challengeMovies.length}}</span> de 8 filmes</p>
       </div>
       <div class="f-right" *ngIf="challengeMovies.length == 8">
-        <mat-button-toggle value="bold">GERAR MEU CAMPEONATO</mat-button-toggle>
+        <mat-button-toggle value="bold" (click)="challenge()">GERAR MEU CAMPEONATO</mat-button-toggle>
       </div>
       <div class="f-right-unclickable" *ngIf="challengeMovies.length != 8">
         <mat-button-toggle>GERAR MEU CAMPEONATO</mat-button-toggle>

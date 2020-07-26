@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit {
     this.moviesProvider.getMovies().subscribe(data => {
       if (data != null && data != 'undefined') {
         this.movies = data;
-        this.movies.sort(this.dynamicSort("titulo"));
       }
     });
   }
@@ -42,7 +41,6 @@ export class HomeComponent implements OnInit {
     } else {
       this.removeMovie(event.source.value);
     }
-    console.log(this.challengeMovies);
   }
 
   getMovieById(id) {
@@ -56,21 +54,11 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  dynamicSort(property) {
-    var sortOrder = 1;
-
-    if (property[0] === "-") {
-      sortOrder = -1;
-      property = property.substr(1);
-    }
-
-    return function (a, b) {
-      if (sortOrder == -1) {
-        return b[property].localeCompare(a[property]);
-      } else {
-        return a[property].localeCompare(b[property]);
+  challenge() {
+    this.moviesProvider.challengeMovies(this.challengeMovies).subscribe(data => {
+      if (data != null && data != 'undefined') {
+        console.log(data, "response");
       }
-    }
+    });
   }
-
 }
