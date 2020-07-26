@@ -91,23 +91,29 @@ mat-button-toggle {
     }
 
     mat-grid-list {
-      background: #494848;
+      background: #f0eeee;
 
       mat-grid-tile {
         mat-card {
-          background-color: #dfd9d9;
-          color: #1f1f1f;
+          background-color: #464545;
+          color: #f0eeee;
           padding-left: 24px;
-          padding-right: 24px;
+          width: 186px;
+          height: 70px;
 
           .f-left {
             width: 5%;
             float: left;
 
             .mat-checkbox ::ng-deep .mat-checkbox-inner-container {
-              width: 32px;
-              height: 32px;
+              width: 34px;
+              height: 34px;
               margin-top: 14px;
+              border-radius: 5px;
+              border: solid 3px #f0eeee;
+              background-color: #f0eeee;
+              color: #f0eeee;
+
             }
 
           }
@@ -115,14 +121,15 @@ mat-button-toggle {
           .f-right {
             width: 95%;
             float: left;
-            padding-left: 36px;
+            padding-left: 40px;
             box-sizing: border-box;
-
             p {
               font-weight: 200;
               font-size: 14px;
               width: 90%;
               text-align: justify;
+              position: absolute;
+              bottom: 0;
             }
           }
         }

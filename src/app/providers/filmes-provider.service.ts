@@ -6,7 +6,7 @@ import { catchError, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class FilmesProviderService {
-  url = 'https://copafilmes.azurewebsites.net/api/filmes';
+  url = 'https://localhost:5000/api/getfilms';
 
   constructor(public http: HttpClient) { }
 

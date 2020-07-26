@@ -9,6 +9,8 @@ import { FilmesProviderService } from '../providers/filmes-provider.service';
 })
 export class HomeComponent implements OnInit {
 
+  movies: any = null;
+
   constructor(
     private router: Router,
     private moviesProvider: FilmesProviderService
@@ -22,8 +24,12 @@ export class HomeComponent implements OnInit {
   getMovies() {
     this.moviesProvider.getMovies().subscribe(data => {
       console.log(data)
-    })
+      if (data != null && data != 'undefined') {
+        this.movies = data;
+        console.log(this.movies, "os filmes");
+      }
+    });
   }
 
-  
+
 }

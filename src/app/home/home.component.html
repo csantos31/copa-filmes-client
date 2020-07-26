@@ -3,14 +3,12 @@
     <mat-card>
       <p>CAMPEONATO DE FILMES</p>
       <mat-divider></mat-divider>
-
       <h1>Fase de seleção</h1>
       <h2>
         Selecione 8 filmes que você deseja que entrem na competição e depois pressione o botão
         Gerar Meu Campeonato para prosseguir.
       </h2>
     </mat-card>
-
     <div class="count">
       <div class="f-left">
         <p>Selecionados 0 de 8 filmes</p>
@@ -19,10 +17,8 @@
         <mat-button-toggle value="bold">GERAR MEU CAMPEONATO</mat-button-toggle>
       </div>
     </div>
-
-    <mat-grid-list cols="4" rowHeight="2:1">
-
-      <mat-grid-tile>
+    <mat-grid-list cols="4" rowHeight="2:1" *ngIf="movies != null">
+      <mat-grid-tile *ngFor="let movie of movies">
         <!--item-->
         <mat-card class="custom-card">
           <div class="f-left">
@@ -30,12 +26,11 @@
             </mat-checkbox>
           </div>
           <div class="f-right">
-            <b>Sherlock Holmes</b>
-            <p>2018</p>
+            <b>{{movie.titulo}}</b>
+            <p>{{movie.ano}}</p>
           </div>
         </mat-card>
       </mat-grid-tile>
-
     </mat-grid-list>
   </div>
 </div>
