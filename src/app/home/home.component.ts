@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
   challenge() {
     this.moviesProvider.challengeMovies(this.challengeMovies).subscribe(data => {
       if (data != null && data != 'undefined') {
-        console.log(data, "response");
+        this.router.navigate(['/final'], { state: { data: data } });
       }
     });
   }

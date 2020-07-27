@@ -8,13 +8,21 @@
         Veja o resultado final do campeonato de filmes de forma simples e rápida.
       </h2>
     </mat-card>
-    <div class="resultado">
+    <div class="resultado" *ngIf="winners != null">
         <div class="line-film">
             <div class="number-film">
                 <p>1º</p>
             </div>
             <div class="title-film">
-                <p>Hagnarok</p>
+                <p>{{winners[0].titulo}}</p>
+            </div>
+        </div>
+        <div class="line-film">
+            <div class="number-film">
+                <p>2º</p>
+            </div>
+            <div class="title-film">
+                <p>{{winners[1].titulo}}</p>
             </div>
         </div>
     </div>
