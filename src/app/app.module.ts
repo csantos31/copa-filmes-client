@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -64,6 +64,9 @@ export const APP_DATE_FORMATS = {
     { provide: MAT_DATE_FORMATS, useValue: APP_DATE_FORMATS },
     { provide: DateAdapter, useClass: MyDateAdapter },
     [DatePipe]
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   bootstrap: [AppComponent]
 })
