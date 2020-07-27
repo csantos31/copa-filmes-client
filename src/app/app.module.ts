@@ -21,6 +21,7 @@ import { LOCALE_ID } from '@angular/core'
 import { DateAdapter } from '@angular/material/core';
 import { MyDateAdapter } from './my-date-adapter';
 import * as moment from "moment";
+import { FinalComponent } from './final/final.component';
 
 // import { MD_DATE_FORMATS } from '@angular/material';
 registerLocaleData(localePt);
@@ -41,7 +42,8 @@ export const APP_DATE_FORMATS = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    FinalComponent
   ],
   imports: [
     BrowserModule,
