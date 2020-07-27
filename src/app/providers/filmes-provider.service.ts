@@ -6,7 +6,7 @@ import { catchError, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class FilmesProviderService {
-  url = 'https://localhost:5000/api/';
+  url = 'https://copa-filmes-server.herokuapp.com/api/';
 
   constructor(public http: HttpClient) { }
 
